@@ -1,0 +1,57 @@
+{
+    "name": "rrakhmit/ecom71-repo",
+    "description": "My ECOM71 Repo",
+    "keywords": [
+        "rrakhmit",
+        "ecom71-repo"
+    ],
+    "homepage": "https://github.com/rrakhmit/ecom71-repo",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Rajib Kumar Rakhmit",
+            "email": "rrakhmit@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4",
+        "illuminate/support": "*"
+    },
+    "require-dev":{
+        "phpunit/phpunit" : "*",
+        "scrutinizer/ocular": "~1.1",
+        "satooshi/php-coveralls": "^0.7.0",
+        "mockery/mockery": ">=0.7.2",
+        "phpspec/phpspec": "~2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Coder71ecom71\\Ecom71Repo\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Coder71ecom71\\Ecom71Repo\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Coder71ecom71\\Ecom71Repo\\Ecom71RepoServiceProvider"
+            ],
+            "aliases": {
+                "Ecom71Repo": "Coder71ecom71\\Ecom71Repo\\Ecom71RepoFacade"
+            }
+        }
+    }
+}
